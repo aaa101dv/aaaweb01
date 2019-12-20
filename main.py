@@ -27,7 +27,7 @@ def home():
 def set_price(cijena):
     global price
     price=cijena
-    return "<p>Promijenili ste cijenu u "+cijena+" Kn.</p>"
+    render_template("index.html", naziv=title, cijena=price, mod=1 ) 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5001')
