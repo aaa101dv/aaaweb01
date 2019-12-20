@@ -27,6 +27,7 @@ def home():
 def set_price(cijena):
     global price
     price=cijena
+    ts = time.time()
     print datetime.datetime.fromtimestamp(ts).strftime('%d-%m-%Y %H:%M:%S') + " promjena cijen u "+str(price)+" Kn" 
     return render_template("index.html", naziv=title, cijena=price, mod=1 ) 
 
